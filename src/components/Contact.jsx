@@ -15,7 +15,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Contact() {
   return (
-    <section className="py-5 bg-black text-white">
+    <section id='contact' className=" py-5 bg-black text-white">
       <h1 className="text-white text-center py-5 fs-1">Contact</h1>
       <div className="container">
         <div className="row g-4">

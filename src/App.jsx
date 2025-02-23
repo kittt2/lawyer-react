@@ -3,7 +3,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Services from './pages/Services';
 import ServiceDetail from './pages/ServiceDetail';
-
+import ScrollToTop from './components/Scroll';
 import Aboutd from './pages/About-details';
 import Body from './components/Body';
 
@@ -12,6 +12,7 @@ function App() {
     <>
    
       <Routes>
+      
         <Route path="/" element={<Body />}>
           <Route index element={<Home />} />
           <Route path="services" element={<Services />} />

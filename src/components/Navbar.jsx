@@ -21,19 +21,19 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <Link className="nav-link fs-5 me-3" to="/">Home</Link>
+              <Link className="nav-link fw-semibold fs-5 me-3" to="/">Home</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link fs-5 me-3" to="/services">Services</Link>
+              <Link className="nav-link  fw-semibold fs-5 me-3" to="/services">Services</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link fs-5 me-3" to="/about">About</Link>
+              <Link className="nav-link fw-semibold fs-5 me-3" to="/about">About Us</Link>
             </li>
           </ul>
 
-          <Link to="/contact" className="btn btn-warning rounded-3 fw-bold px-4 ms-3">
+          <a href="#contact" className="btn btn-warning rounded-3 fw-bold px-4 ms-3">
             <PhoneOutlined /> 999999999
-          </Link>
+          </a>
         </div>
       </div>
     </nav>
