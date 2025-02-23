@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #2c3e50;
+  --primary-color: #0f1113;
   --secondary-color: #34495e;
   --accent-color: #8b4513;
   --text-color: #333333;
@@ -8,7 +8,6 @@
 
 body {
   margin: 0;
-  font-family: 'Times New Roman', Times, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--text-color);
@@ -18,10 +17,11 @@ body {
 
 .navbar {
   background-color: var(--primary-color) !important;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.navbar-brand, .nav-link {
+.navbar-brand,
+.nav-link {
   color: #ffffff !important;
 }
 
@@ -30,7 +30,7 @@ body {
 }
 
 .hero-section {
-  min-height: 90vh;
+  min-height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
@@ -39,17 +39,38 @@ body {
   text-align: center;
   position: relative;
 }
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
 
 .service-card {
-  background-color: var(--light-gray);
+  background-color:#f4f1eb;
+  color: rgb(80, 78, 78);
   border: none;
+  cursor: pointer;
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.2s ease;
 }
 
 .service-card:hover {
-  transform: translateY(-5px);
+  transform: scale(1.1);
+  background-color: #0f1113;
+  color: #f4f1eb;
+}
+
+.testimonial-card{
+  color: #6d7174;
+  background-color:white;
+}
+.testimonial-card:hover{
+  background-color:rgb(164, 140, 140);
+  color: white;
+  
 }
 
 .section-title {
@@ -61,7 +82,7 @@ body {
 }
 
 .section-title::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -10px;
   left: 0;
@@ -84,6 +105,7 @@ body {
 .ant-btn-primary:hover {
   background-color: #734011 !important;
   border-color: #734011 !important;
+  color: #333333 !important;
 }
 
 .bg-light {
@@ -94,7 +116,7 @@ body {
   .hero-section {
     min-height: 70vh;
   }
-  
+
   .section-title {
     font-size: 2rem;
   }

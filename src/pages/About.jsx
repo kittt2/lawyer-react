@@ -1,76 +1,54 @@
-import { motion } from 'framer-motion';
-import { Parallax } from 'react-parallax';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-const aboutImage = 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80';
-
-function About() {
+const About = () => {
+  const navigate = useNavigate();
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-      <Parallax bgImage={aboutImage} strength={300}>
-        <div className="parallax-content">
-          <div className="container">
-            <h1 className="display-4 text-center">About Our Firm</h1>
-            <p className="lead text-center">A Legacy of Legal Excellence</p>
+    <>
+      <h1 className="fw-semibold text-center my-5 pb-4" style={{ color: "#6d7174" }}>About Me</h1>
+
+      <div className="container my-5 p-md-5">
+
+        <div className="row align-items-center">
+          <div className="col-lg-6">
+            <h2 className="text-uppercase fw-bolder" style={{ fontSize: "clamp(2.5rem, 4vw, 4rem)", color: "black" }}>RISHUB KAPOOR</h2>
+            <h5 className="text-muted fw-bold" style={{ fontSize: "clamp(1.2rem, 2.5vw, 2rem)", color: "#6d7174" }}>Advocate, Company Secretary</h5>
+            <p className="fs-4 fw-semibold" style={{ fontSize: "clamp(1rem, 2vw, 1.5rem)", color: "#6d7174" }}>
+              Registered with Supreme Court Bar Association and Delhi High Court Bar Association
+            </p>
+            <p className="fs-5" style={{ fontSize: "clamp(1rem, 1.5vw, 1.2rem)", color: "#6d7174" }}>
+              Rishub founded <strong>RK Legal Associates</strong> in 2021 and
+              leads the Dispute and Regulatory Practice at the Firm. His expertise
+              spans Commercial Litigation, Alternative Dispute Resolution,
+              Energy/Infrastructure Laws, and more.
+            </p>
+            <button className="rounded-5 border-0 px-5 py-2 fs-4 text-white" style={{ background: "#daae72" }} onClick={() => navigate("/about")}>Read more</button>
           </div>
-        </div>
-      </Parallax>
 
-      <div className="container py-5">
-        <div className="row">
-          <div className="col-lg-8 mx-auto">
-            <motion.div
-              initial={{ y: 50, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="section-title text-center">Our Story</h2>
-              <p className="mb-4">
-                Founded in 2000, our law firm has been dedicated to providing exceptional legal services to our clients.
-                With a team of experienced attorneys and a commitment to excellence, we have built a reputation for
-                delivering results while maintaining the highest ethical standards.
-              </p>
-              <p>
-                Our approach combines traditional legal expertise with modern solutions, ensuring that we can meet the
-                evolving needs of our clients in today's complex legal landscape.
-              </p>
-            </motion.div>
-
-            <motion.div
-              className="mt-5"
-              initial={{ y: 50, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              <h3 className="h4 mb-4">Our Values</h3>
-              <div className="row g-4">
-                <div className="col-md-6">
-                  <div className="card service-card h-100">
-                    <div className="card-body">
-                      <h4 className="h5">Integrity</h4>
-                      <p>We maintain the highest ethical standards in all our dealings.</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-6">
-                  <div className="card service-card h-100">
-                    <div className="card-body">
-                      <h4 className="h5">Excellence</h4>
-                      <p>We strive for excellence in every case we handle.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
+          <div className="col-lg-6 text-center">
+            <div className="rounded-bottom-5 position-relative" style={{ padding: "10px" }}>
+              <div style={{
+                backgroundImage: "url('ab.png')",
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                opacity: 0.5
+              }}></div>
+              <img
+                src="photo2.png"
+                alt="Rishub Kapoor"
+                className="img-fluid rounded-bottom-5 rounded-start-4"
+                style={{ maxWidth: "100%", borderRadius: "10px", position: "relative" }}
+              />
+            </div>
           </div>
         </div>
       </div>
-    </motion.div>
+    </>
   );
-}
+};
 
 export default About;
